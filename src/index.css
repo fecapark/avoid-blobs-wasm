@@ -1,0 +1,116 @@
+@font-face {
+  font-family: "Soehne";
+  src: url("/soehne/soehne-200.woff2") format("woff2");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Soehne";
+  src: url("/soehne/soehne-300.woff2") format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Soehne";
+  src: url("/soehne/soehne-400.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Soehne";
+  src: url("/soehne/soehne-500.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Soehne";
+  src: url("/soehne/soehne-600.woff2") format("woff2");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Soehne";
+  src: url("/soehne/soehne-700.woff2") format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Soehne";
+  src: url("/soehne/soehne-800.woff2") format("woff2");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Soehne";
+  src: url("/soehne/soehne-900.woff2") format("woff2");
+  font-weight: 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  background-color: inherit;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #0c0a0c;
+  color: white;
+  font-family: Soehne, sans-serif;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+#shadow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: shadow-fade 1s ease forwards;
+
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+#game-container {
+  position: relative;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 0.88rem;
+  width: 100%;
+}
+
+footer {
+  color: #b2b0b2;
+  font-size: 13px;
+}
+
+a {
+  color: #2d79e6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@keyframes shadow-fade {
+  from {
+    box-shadow: 0 0 0 #eeeeee11;
+  }
+  to {
+    box-shadow: 0 40px 90px #eeeeee11;
+  }
+}
