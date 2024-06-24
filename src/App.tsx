@@ -1,20 +1,26 @@
 import { useEffect, useState } from "react";
 import styles from "./App.module.css";
 import { Unity, useUnityContext } from "react-unity-webgl";
-import { ReactUnityEventParameter } from "react-unity-webgl/distribution/types/react-unity-event-parameters";
+// import { ReactUnityEventParameter } from "react-unity-webgl/distribution/types/react-unity-event-parameters";
 import { FaGithub } from "react-icons/fa";
 import { Tooltip } from "react-tooltip";
 
 export default function App() {
   const [size, setSize] = useState({ width: 0, height: 0 });
-  const [score, setScore] = useState(0);
-  const { unityProvider, isLoaded, addEventListener, removeEventListener } =
-    useUnityContext({
-      loaderUrl: "unity/avoidblobs.loader.js",
-      dataUrl: "unity/avoidblobs.data.br",
-      frameworkUrl: "unity/avoidblobs.framework.js.br",
-      codeUrl: "unity/avoidblobs.wasm.br",
-    });
+  // const [score, setScore] = useState(0);
+  // const { unityProvider, isLoaded, addEventListener, removeEventListener } =
+  //   useUnityContext({
+  //     loaderUrl: "unity/avoidblobs.loader.js",
+  //     dataUrl: "unity/avoidblobs.data.br",
+  //     frameworkUrl: "unity/avoidblobs.framework.js.br",
+  //     codeUrl: "unity/avoidblobs.wasm.br",
+  //   });
+  const { unityProvider, isLoaded } = useUnityContext({
+    loaderUrl: "unity/avoidblobs.loader.js",
+    dataUrl: "unity/avoidblobs.data.br",
+    frameworkUrl: "unity/avoidblobs.framework.js.br",
+    codeUrl: "unity/avoidblobs.wasm.br",
+  });
 
   const getDevicePixelRatio = () => {
     return window.devicePixelRatio > 1 ? 2 : 1;
@@ -53,19 +59,19 @@ export default function App() {
     };
   }, []);
 
-  useEffect(() => {
-    if (!unityProvider) return;
+  // useEffect(() => {
+  //   if (!unityProvider) return;
 
-    function setScoreFromUnity(score: ReactUnityEventParameter) {
-      const scoreValue = Math.floor((score as number) * 100) / 100;
-      setScore(scoreValue);
-    }
+  //   function setScoreFromUnity(score: ReactUnityEventParameter) {
+  //     const scoreValue = Math.floor((score as number) * 100) / 100;
+  //     setScore(scoreValue);
+  //   }
 
-    addEventListener("ReactSetScore", setScoreFromUnity);
-    return () => {
-      removeEventListener("ReactSetScore", setScoreFromUnity);
-    };
-  }, [unityProvider, addEventListener, removeEventListener, setScore]);
+  //   addEventListener("ReactSetScore", setScoreFromUnity);
+  //   return () => {
+  //     removeEventListener("ReactSetScore", setScoreFromUnity);
+  //   };
+  // }, [unityProvider, addEventListener, removeEventListener, setScore]);
 
   return (
     <div className={styles.container}>
