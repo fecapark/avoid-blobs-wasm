@@ -81,7 +81,7 @@ export default function App() {
         </div>
         <a
           className={styles.github}
-          href="https://github.com/fecapark"
+          href="https://github.com/fecapark/avoid-blobs-wasm"
           target="_blank"
           rel="noreferrer noopener"
           data-tooltip-id="my-tooltip"
