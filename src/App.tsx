@@ -17,9 +17,9 @@ export default function App() {
   //   });
   const { unityProvider, isLoaded } = useUnityContext({
     loaderUrl: "unity/avoidblobs.loader.js",
-    dataUrl: "unity/avoidblobs.data.br",
-    frameworkUrl: "unity/avoidblobs.framework.js.br",
-    codeUrl: "unity/avoidblobs.wasm.br",
+    dataUrl: "unity/avoidblobs.data.unityweb",
+    frameworkUrl: "unity/avoidblobs.framework.js.unityweb",
+    codeUrl: "unity/avoidblobs.wasm.unityweb",
   });
 
   const getDevicePixelRatio = () => {
