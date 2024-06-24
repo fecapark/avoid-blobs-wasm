@@ -3,6 +3,8 @@ import styles from "./App.module.css";
 import { Unity, useUnityContext } from "react-unity-webgl";
 // import { ReactUnityEventParameter } from "react-unity-webgl/distribution/types/react-unity-event-parameters";
 import { FaGithub } from "react-icons/fa";
+import { MdHeadset } from "react-icons/md";
+
 import { Tooltip } from "react-tooltip";
 
 export default function App() {
@@ -113,12 +115,43 @@ export default function App() {
       {/* <div>{Math.floor(score * 100) / 100}</div> */}
       <div id="shadow">
         <div id="game-container">
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 12,
+              marginBottom: 8,
+              fontWeight: 500,
+              zIndex: 1,
+              color: "#9DA5B6",
+              fontSize: 18,
+            }}
+          >
+            <div
+              style={{
+                display: "inline-flex",
+                justifyContent: "center",
+                alignItems: "center",
+                fontSize: 64,
+              }}
+            >
+              <MdHeadset />
+            </div>
+            <div>Musics and sound effects in this game.</div>
+          </div>
           <Unity
             unityProvider={unityProvider}
             style={{
               width: size.width,
               height: size.height,
               visibility: isLoaded ? "visible" : "hidden",
+              position: "relative",
+              zIndex: 10,
             }}
             matchWebGLToCanvasSize={true}
             devicePixelRatio={getDevicePixelRatio()}
@@ -126,15 +159,17 @@ export default function App() {
         </div>
       </div>
       <footer>
-        Copyright &copy; {new Date().getFullYear()}{" "}
-        <a
-          href="https://github.com/fecapark"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Sanghyeok Park
-        </a>
-        . All rights reserved.
+        <div>
+          Copyright &copy; {new Date().getFullYear()}{" "}
+          <a
+            href="https://github.com/fecapark"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Sanghyeok Park
+          </a>
+          . All rights reserved.
+        </div>
       </footer>
     </div>
   );
