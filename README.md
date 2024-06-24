@@ -1,6 +1,6 @@
 # Avoid Blobs
 
-[Play](https://avoid-blobs-wasm-n11vb7k66-fecaparks-projects.vercel.app/)
+[Play](https://avoid-blobs-wasm.vercel.app/)
 
 Made by fecapark.
 
