@@ -1,5 +1,7 @@
 # Avoid Blobs
 
+[Play](https://avoid-blobs-wasm-n11vb7k66-fecaparks-projects.vercel.app/)
+
 Made by fecapark.
 
 Remaked version of my game [Avoid Blobs](https://github.com/pshtony1/avoid-blobs). Using Unity's web assembly.
@@ -12,7 +14,9 @@ and with more attack patterns.
 
 ## How to play
 
-Mobile not support yet.
+Avoid all blobs and attacks!
+
+> Mobile not support yet.
 
 - `Move`: WASD or arrow keys
 
